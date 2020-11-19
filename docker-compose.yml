@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+    spa_node:
+        container_name: spa_node
+        build: .
+        ports:
+            - ${VUE_UI:-8000}:8000
+            - 8080:8080
+        volumes:
+            - .:/code

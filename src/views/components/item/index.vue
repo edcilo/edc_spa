@@ -85,7 +85,6 @@ import VeCode from "@/components/Code";
 import VeCol from "@/components/Grid/Col";
 import VeDivider from "@/components/Divider";
 import VeItem from "@/components/Item";
-import VeInputSwitch from "@/components/Input/Switch";
 import VeRow from "@/components/Grid/Row";
 
 library.add(faTimes);

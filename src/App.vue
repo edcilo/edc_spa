@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import {Component, Watch} from "vue-property-decorator";
-import {Route} from "vue-router";
+import Vue from "vue";
+import { Component, Watch } from "vue-property-decorator";
+import { Route } from "vue-router";
 
 @Component({
   name: "App"
@@ -15,7 +15,7 @@ import {Route} from "vue-router";
 export default class App extends Vue {
   protected className: string | null = null;
 
-  @Watch("$route", {immediate: true})
+  @Watch("$route", { immediate: true })
   onRoutehanged(to: Route) {
     this.className = to.name || null;
   }

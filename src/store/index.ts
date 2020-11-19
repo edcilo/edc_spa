@@ -12,6 +12,6 @@ const vuexLocal = new VuexPersistence<StateInterface>({
 });
 
 export default new Vuex.Store<StateInterface>({
-  modules: {app},
+  modules: { app },
   plugins: [vuexLocal.plugin]
 });

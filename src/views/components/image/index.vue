@@ -140,7 +140,7 @@ export default {
   },
 
   watch: {
-    error(error) {
+    error() {
       this.eventLoad = false;
       this.eventError = false;
     }
