@@ -68,7 +68,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "src/styles/main";
 
 .loader-logo {
