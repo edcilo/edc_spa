@@ -8,16 +8,18 @@
     <router-link slot="left" :to="{ name: 'home' }">
       <img
         class="app__header-logo"
-        src="@/assets/images/feedma/logo.svg"
+        src="@/assets/edcilo-logo-dark.svg"
         alt="logo"
         width="60px"
       />
     </router-link>
 
     <ve-nav slot="right" class="app__menu">
+      <!--
       <router-link class="app__menu-link" :to="{ name: 'components' }">
         {{ $t("nav.components") | capitalize }}
       </router-link>
+      -->
     </ve-nav>
   </ve-header>
 </template>
@@ -99,10 +101,10 @@ export default class HeaderPartial extends Vue {
   &-link {
     display: block;
     padding: $padding-sm;
-    color: $c-teal-dark;
+    color: $c-blue-dark;
 
     &:hover {
-      color: $c-teal-light;
+      color: $c-blue-light;
       text-decoration: none;
       transition: color 0.3s;
     }

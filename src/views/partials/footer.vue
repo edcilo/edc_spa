@@ -3,7 +3,7 @@
     <ve-container :fluid="fluid">
       <ve-row>
         <ve-col class="footer__rights">
-          Feedma 2020 | {{ $t("home.designedWith") }}
+          edcilo 2020 | {{ $t("home.designedWith") }}
           <font-awesome-icon icon="heart" />
         </ve-col>
 
