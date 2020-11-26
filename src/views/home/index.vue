@@ -2,6 +2,7 @@
   <landing-layout>
     <partial-hero />
     <partial-about />
+    <powered-by />
   </landing-layout>
 </template>
 
@@ -14,13 +15,15 @@ import { Component } from "vue-property-decorator";
 import LandingLayout from "@/layouts/landing.vue";
 import PartialHero from "@/views/home/partials/hero.vue";
 import PartialAbout from "@/views/home/partials/about.vue";
+import PoweredBy from "@/views/home/partials/poweredBy.vue";
 
 @Component({
   name: "ViewHome",
   components: {
     LandingLayout,
     PartialHero,
-    PartialAbout
+    PartialAbout,
+    PoweredBy
   },
   metaInfo() {
     const title: string = config("app.name");

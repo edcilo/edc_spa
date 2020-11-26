@@ -9,6 +9,11 @@ export interface  SchemaInterface {
     label: string;
     title: string;
     description: string;
+  },
+  powered_by: {
+    label: string;
+    title: string;
+    branding: Array<string>;
   }
 }
 
