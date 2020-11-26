@@ -4,6 +4,11 @@ export interface  SchemaInterface {
     title: string;
     subtitle: string;
     background: string;
+  },
+  about: {
+    label: string;
+    title: string;
+    description: string;
   }
 }
 
