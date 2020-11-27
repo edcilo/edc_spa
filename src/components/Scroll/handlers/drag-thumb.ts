@@ -10,32 +10,6 @@ interface MouseEventCustom extends MouseEvent {
   [key: string]: any;
 }
 
-export default function(i: DataInterface) {
-  bindMouseScrollHandler(i, [
-    "width",
-    "width",
-    "pageX",
-    "xWidth",
-    "x",
-    "xWidth",
-    "scrollLeft",
-    "x",
-    "xRail"
-  ]);
-
-  bindMouseScrollHandler(i, [
-    "height",
-    "height",
-    "pageY",
-    "yHeight",
-    "y",
-    "yHeight",
-    "scrollTop",
-    "y",
-    "yRail"
-  ]);
-}
-
 function bindMouseScrollHandler(
   i: DataInterface,
   [
@@ -105,4 +79,30 @@ function bindMouseScrollHandler(
       e.preventDefault();
     }
   );
+}
+
+export default function(i: DataInterface) {
+  bindMouseScrollHandler(i, [
+    "width",
+    "width",
+    "pageX",
+    "xWidth",
+    "x",
+    "xWidth",
+    "scrollLeft",
+    "x",
+    "xRail"
+  ]);
+
+  bindMouseScrollHandler(i, [
+    "height",
+    "height",
+    "pageY",
+    "yHeight",
+    "y",
+    "yHeight",
+    "scrollTop",
+    "y",
+    "yRail"
+  ]);
 }

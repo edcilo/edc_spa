@@ -2,7 +2,7 @@ import "./styles.scss";
 
 import { VNode } from "vue";
 import { Component, Emit, Prop, Vue, Watch } from "vue-property-decorator";
-import { listStylesInterface } from "./types";
+import { ListStylesInterface } from "./types";
 import VeNav from "@/components/Nav";
 
 @Component({
@@ -125,8 +125,8 @@ export default class VeMenu extends Vue {
     return classes;
   }
 
-  get listStyles(): listStylesInterface {
-    const styles: listStylesInterface = {};
+  get listStyles(): ListStylesInterface {
+    const styles: ListStylesInterface = {};
 
     if (this.positionX) {
       styles.left = `${this.positionX}px`;

@@ -1,4 +1,4 @@
-export interface containerStylesInterface {
+export interface ContainerStylesInterface {
   width?: string;
   height?: string;
 }

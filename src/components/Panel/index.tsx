@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { VNode } from "vue";
 import { Component, Vue, Prop, Emit } from "vue-property-decorator";
-import { containerStylesInterface } from "./types";
+import { ContainerStylesInterface } from "./types";
 
 @Component({
   name: "VePanel"
@@ -20,7 +20,7 @@ export default class VePanel extends Vue {
     return null;
   }
 
-  get containerStyle(): containerStylesInterface {
+  get containerStyle(): ContainerStylesInterface {
     let styles = {};
     if (this.width) {
       styles = { ...styles, width: this.width };
