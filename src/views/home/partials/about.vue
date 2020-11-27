@@ -4,7 +4,7 @@
       <div class="about__content">
         <div class="about__body">
           <span class="about__label">{{ about.label }}</span>
-          <h1 class="about__title" v-html="about.title" />
+          <h2 class="about__title">{{ about.title }}</h2>
           <p class="about__description">{{ about.description }}</p>
         </div>
       </div>

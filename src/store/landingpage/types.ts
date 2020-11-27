@@ -14,6 +14,16 @@ export interface  SchemaInterface {
     label: string;
     title: string;
     branding: Array<string>;
+  },
+  footer: {
+    title: string;
+    email: string;
+    address: string;
+    social: {
+      facebook: string;
+      linkedin: string;
+      twitter: string;
+    };
   }
 }
 

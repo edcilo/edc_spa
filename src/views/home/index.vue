@@ -3,6 +3,7 @@
     <partial-hero />
     <partial-about />
     <powered-by />
+    <contact />
   </landing-layout>
 </template>
 
@@ -16,6 +17,7 @@ import LandingLayout from "@/layouts/landing.vue";
 import PartialHero from "@/views/home/partials/hero.vue";
 import PartialAbout from "@/views/home/partials/about.vue";
 import PoweredBy from "@/views/home/partials/poweredBy.vue";
+import Contact from "@/views/home/partials/footer.vue";
 
 @Component({
   name: "ViewHome",
@@ -23,7 +25,8 @@ import PoweredBy from "@/views/home/partials/poweredBy.vue";
     LandingLayout,
     PartialHero,
     PartialAbout,
-    PoweredBy
+    PoweredBy,
+    Contact
   },
   metaInfo() {
     const title: string = config("app.name");

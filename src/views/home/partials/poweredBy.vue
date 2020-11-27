@@ -4,7 +4,7 @@
       <div class="powered-by__content">
         <div class="powered-by__body">
           <span class="powered-by__label">{{ poweredBy.label }}</span>
-          <h1 class="powered-by__title" v-html="poweredBy.title" />
+          <h2 class="powered-by__title">{{ poweredBy.title }}</h2>
           <div class="powered-by__branding">
             <img v-for="icon in poweredBy.branding" :key="icon" class="powered-by__logo" :src="importAsset(icon)" />
           </div>
