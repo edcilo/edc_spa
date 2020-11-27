@@ -1,5 +1,5 @@
 import { Module, Mutation, VuexModule } from "vuex-module-decorators";
-import LandingState, {SchemaInterface} from "./types";
+import LandingState, { SchemaInterface } from "./types";
 
 @Module({ namespaced: true, name: "app" })
 export default class LandingModule extends VuexModule implements LandingState {

@@ -1,9 +1,9 @@
 import AppState from "./app/types";
-import LandingState from './landingpage/types';
+import LandingState from "./landingpage/types";
 
 interface RootState {
   app: AppState;
-  landingpage: LandingState
+  landingpage: LandingState;
 }
 
 export default RootState;

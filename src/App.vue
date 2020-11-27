@@ -1,6 +1,10 @@
 <template>
   <div id="app" :class="className">
-    <ve-loading :open="loading" :fullscreen="loader.fullscreen" :opacity="loader.opacity">
+    <ve-loading
+      :open="loading"
+      :fullscreen="loader.fullscreen"
+      :opacity="loader.opacity"
+    >
       <img src="@/assets/edcilo-logo-clear.svg" class="loader-logo" />
     </ve-loading>
     <router-view />
@@ -44,7 +48,7 @@ export default class App extends Vue {
   protected loader = {
     fullscreen: true,
     opacity: 1
-  }
+  };
 
   @Watch("$route", { immediate: true })
   onRoutehanged(to: Route) {

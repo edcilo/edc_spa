@@ -67,7 +67,7 @@ export default function(i: DataInterface) {
 
   let startOffset: TouchInterface = { pageX: 0, pageY: 0 };
   let startTime = 0;
-  let speed: SpeedInterface = { x: 0, y: 0 };
+  const speed: SpeedInterface = { x: 0, y: 0 };
   let easingLoop: any = 0;
 
   function getTouch(e: TouchEventCustom) {

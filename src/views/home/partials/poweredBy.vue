@@ -6,7 +6,12 @@
           <span class="powered-by__label">{{ poweredBy.label }}</span>
           <h2 class="powered-by__title">{{ poweredBy.title }}</h2>
           <div class="powered-by__branding">
-            <img v-for="icon in poweredBy.branding" :key="icon" class="powered-by__logo" :src="importAsset(icon)" />
+            <img
+              v-for="icon in poweredBy.branding"
+              :key="icon"
+              class="powered-by__logo"
+              :src="importAsset(icon)"
+            />
           </div>
         </div>
       </div>
@@ -80,7 +85,7 @@ export default class ViewPartialPoweredBy extends Vue {
     text-transform: uppercase;
   }
 
-  &__branding  {
+  &__branding {
     background: transparent;
   }
 

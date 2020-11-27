@@ -12,7 +12,11 @@
             <ve-col class="about__cols">
               <h3 class="about__subtitle">{{ about.jobs.title }}</h3>
               <ul>
-                <li v-for="job in about.jobs.jobs" :key="job.title" class="about__job-item">
+                <li
+                  v-for="job in about.jobs.jobs"
+                  :key="job.title"
+                  class="about__job-item"
+                >
                   <h5 class="about__job-title">{{ job.title }}</h5>
                   <span class="about__job-position">{{ job.position }}</span>
                   <span class="about__job-time">{{ job.time }}</span>
@@ -22,11 +26,19 @@
 
             <ve-col class="about__cols">
               <h3 class="about__subtitle">{{ about.doing.title }}</h3>
-              <p class="about__doing-description">{{ about.doing.description }}</p>
+              <p class="about__doing-description">
+                {{ about.doing.description }}
+              </p>
               <ul>
-                <li v-for="tech in about.doing.technologies" :key="tech.title" class="about__doing-item">
+                <li
+                  v-for="tech in about.doing.technologies"
+                  :key="tech.title"
+                  class="about__doing-item"
+                >
                   <h5 class="about__doing-title">{{ tech.title }}</h5>
-                  <span class="about__doing-description">{{ tech.description }}</span>
+                  <span class="about__doing-description">{{
+                    tech.description
+                  }}</span>
                 </li>
               </ul>
             </ve-col>
@@ -34,11 +46,19 @@
             <ve-col class="about__cols">
               <h3 class="about__subtitle">{{ about.skills.title }}</h3>
               <ul>
-                <li v-for="skill in about.skills.skills" :key="skill.title" class="about__skills-item">
-                  <ve-progress :value="100/about.experience*skill.years" />
+                <li
+                  v-for="skill in about.skills.skills"
+                  :key="skill.title"
+                  class="about__skills-item"
+                >
+                  <ve-progress
+                    :value="(100 / about.experience) * skill.years"
+                  />
                   <div class="about__skills-description">
                     <span class="about__skills-title">{{ skill.title }}</span>
-                    <span class="about__skills-years">{{ skill.years }} {{ $t("dictionary.years") }}</span>
+                    <span class="about__skills-years"
+                      >{{ skill.years }} {{ $t("dictionary.years") }}</span
+                    >
                   </div>
                 </li>
               </ul>
@@ -184,9 +204,11 @@ export default class ViewPartialAbout extends Vue {
       justify-content: space-between;
     }
 
-    &-title {}
+    &-title {
+    }
 
-    &-years {}
+    &-years {
+    }
   }
 }
 </style>

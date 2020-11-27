@@ -1,5 +1,5 @@
 export default {
   components: "componentes",
 
-  years: "años",
+  years: "años"
 };

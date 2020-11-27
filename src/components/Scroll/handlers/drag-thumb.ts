@@ -56,9 +56,9 @@ function bindMouseScrollHandler(
 
   const element: HTMLElementIndex = i.element;
 
-  let startingScrollTop: number = 0;
-  let startingMousepage: number = 0;
-  let scrollBy: number = 0;
+  let startingScrollTop = 0;
+  let startingMousepage = 0;
+  let scrollBy = 0;
 
   function mouseMoveHandler(e: MouseEventCustom) {
     element[scrollTop] =

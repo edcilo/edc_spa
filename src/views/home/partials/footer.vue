@@ -5,7 +5,11 @@
         <div class="footer__body">
           <ve-row>
             <ve-col class="footer__col-1">
-              <img class="footer__logo" :src="require('@/assets/edcilo-logo-clear.svg')" alt="logo-white">
+              <img
+                class="footer__logo"
+                :src="require('@/assets/edcilo-logo-clear.svg')"
+                alt="logo-white"
+              />
             </ve-col>
             <ve-col />
             <ve-col />
@@ -44,7 +48,11 @@ import VeCol from "@/components/Grid/Col";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFacebook, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faLinkedin,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(faFacebook, faLinkedin, faTwitter);
 
@@ -74,7 +82,8 @@ export default class ViewPartialFooter extends Vue {
     padding: $padding-lg;
   }
 
-  &__col-1, &__col-4 {
+  &__col-1,
+  &__col-4 {
     text-align: center;
     color: $c-white;
   }

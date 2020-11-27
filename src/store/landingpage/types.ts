@@ -14,13 +14,13 @@ export interface SkillInterface {
   years: number;
 }
 
-export interface  SchemaInterface {
+export interface SchemaInterface {
   hero: {
     label: string;
     title: string;
     subtitle: string;
     background: string;
-  },
+  };
   about: {
     label: string;
     title: string;
@@ -30,22 +30,22 @@ export interface  SchemaInterface {
     jobs: {
       title: string;
       jobs: Array<JobInterface>;
-    },
+    };
     doing: {
       title: string;
       description: string;
-      technologies: Array<TechnologieInterface>
-    }
+      technologies: Array<TechnologieInterface>;
+    };
     skills: {
       title: string;
       skills: Array<SkillInterface>;
     };
-  },
+  };
   powered_by: {
     label: string;
     title: string;
     branding: Array<string>;
-  },
+  };
   footer: {
     title: string;
     email: string;
@@ -55,7 +55,7 @@ export interface  SchemaInterface {
       linkedin: string;
       twitter: string;
     };
-  }
+  };
 }
 
 export default interface LandingState {

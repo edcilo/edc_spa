@@ -15,8 +15,8 @@ export default function(
   i: DataInterface,
   axis: string,
   diff: number,
-  useScrollingClass: boolean = true,
-  forceFireReachEvent: boolean = false
+  useScrollingClass = true,
+  forceFireReachEvent = false
 ): void {
   let fields!: Array<string>;
 
@@ -35,8 +35,8 @@ function processScrollDiff(
   i: DataInterface,
   diff: number,
   [contentHeight, containerHeight, scrollTop, y, up, down]: Array<string>,
-  useScrollingClass: boolean = true,
-  forceFireReachEvent: boolean = false
+  useScrollingClass = true,
+  forceFireReachEvent = false
 ) {
   const element = i.element;
 

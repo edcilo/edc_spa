@@ -15,7 +15,7 @@ export default class veScroll extends Vue {
       return {};
     }
   })
-  private settings!: Object;
+  private settings!: Record<string, any>;
 
   public $refs!: {
     element: HTMLElement;
@@ -26,11 +26,11 @@ export default class veScroll extends Vue {
   };
 
   private Scrollbar: any = null;
-  private cn: Object = data.elementClasses;
-  private barXClasses: Object = data.barXClasses;
-  private barYClasses: Object = data.barYClasses;
-  private railXClasses: Object = data.railXClasses;
-  private railYClasses: Object = data.railYClasses;
+  private cn: Record<string, any> = data.elementClasses;
+  private barXClasses: Record<string, any> = data.barXClasses;
+  private barYClasses: Record<string, any> = data.barYClasses;
+  private railXClasses: Record<string, any> = data.railXClasses;
+  private railYClasses: Record<string, any> = data.railYClasses;
 
   initScrollbar() {
     data.settings = Object.assign({}, defaultSettings, this.settings);

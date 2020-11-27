@@ -1,7 +1,10 @@
 <template>
   <ve-hero class="hero" :height="100">
     <div class="hero__background">
-      <div class="hero__cover" :style="{'background-image': `url(${background})`}"/>
+      <div
+        class="hero__cover"
+        :style="{ 'background-image': `url(${background})` }"
+      />
       <div class="hero__layer" />
     </div>
     <ve-container>
@@ -75,7 +78,11 @@ export default class ViewPartialHero extends Vue {
     width: 100%;
     height: 100%;
     background: rgba($c-gray-lighter, 0.8);
-    background: linear-gradient(90deg, rgba($c-gray-lighter, 1) 0%, rgba($c-gray-lighter, 0.3) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba($c-gray-lighter, 1) 0%,
+      rgba($c-gray-lighter, 0.3) 100%
+    );
   }
 
   &__content {
