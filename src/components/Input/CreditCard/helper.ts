@@ -330,7 +330,7 @@ export function handleMaskedNumberInputKey(
 
   const keyCode: number = keyCodeFromEvent(e);
   //const element: CustomInputElement = <CustomInputElement>e.target;
-  const element: CustomInputElement = e.target;
+  const element: CustomInputElement = e.target as CustomInputElement;
   let val = element.value;
 
   const caretStart: number = caretStartPosition(element);
