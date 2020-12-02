@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts">
-import config from "@/config";
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import { namespace } from "vuex-class";
