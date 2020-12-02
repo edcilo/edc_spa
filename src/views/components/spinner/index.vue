@@ -28,7 +28,6 @@
 import VeBlueprint from "@/components/Blueprint";
 import VeCode from "@/components/Code";
 import VeCol from "@/components/Grid/Col";
-import VeDivider from "@/components/Divider";
 import VeRow from "@/components/Grid/Row";
 import VeSpinner from "@/components/Spinner";
 

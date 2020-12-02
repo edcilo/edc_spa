@@ -140,7 +140,7 @@ export default function(i: DataInterface) {
       return;
     }
 
-    let shouldPrevent: boolean = false;
+    let shouldPrevent = false;
 
     if (!i.settings.useBothWheelAxes) {
       // deltaX will only be used for horizontal scrolling and deltaY will

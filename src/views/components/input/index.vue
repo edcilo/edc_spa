@@ -291,8 +291,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHeart, faStar, faUser } from "@fortawesome/free-solid-svg-icons";
 
-import VeBlueprint from "@/components/Blueprint";
-import VeCode from "@/components/Code";
 import VeCol from "@/components/Grid/Col";
 import VeDivider from "@/components/Divider";
 import VeInputCheckbox from "@/components/Input/Checkbox";

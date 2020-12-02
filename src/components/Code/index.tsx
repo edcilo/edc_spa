@@ -16,6 +16,7 @@ export default class VeCode extends Vue {
 
   cn = "ve-code";
   classes = "language-none";
+  $refs!: { code: HTMLDivElement };
 
   @Watch("lang", { immediate: true })
   onLangChanged(): void {

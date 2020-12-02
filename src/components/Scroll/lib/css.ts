@@ -27,7 +27,7 @@ function set(element: HTMLElement, obj: ObjString): HTMLElement {
 }
 
 function isRtl(element: HTMLElement): boolean {
-  let elementStyles: CSSStyleDeclaration = get(element);
+  const elementStyles: CSSStyleDeclaration = get(element);
 
   return elementStyles.direction === "rtl";
 }
@@ -36,7 +36,7 @@ function isNegativeScroll(element: HTMLElement): boolean {
   const originalScrollLeft = element.scrollLeft;
   element.scrollLeft = -1;
 
-  let result = element.scrollLeft < 0;
+  const result = element.scrollLeft < 0;
   element.scrollLeft = originalScrollLeft;
 
   return result;
@@ -54,8 +54,8 @@ function reach(
   content: ContentInterface,
   container: ContainerInterface
 ): CssInterface {
-  let { contentWidth, contentHeight } = content;
-  let { containerWidth, containerHeight } = container;
+  const { contentWidth, contentHeight } = content;
+  const { containerWidth, containerHeight } = container;
 
   return {
     x:

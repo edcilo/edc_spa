@@ -94,6 +94,7 @@ export default class VeMask extends Vue {
       this.backgroundStyles.opacity = this.opacity;
     } else {
       this.backgroundStyles.opacity = 0;
+      this.quitFullscreen();
     }
 
     window.setTimeout(this.changeDisplay, this.speed);

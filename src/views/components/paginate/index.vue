@@ -173,16 +173,16 @@ export default {
   },
 
   methods: {
-    onClick(page) {
+    onClick() {
       this.eventClick = true;
     },
-    onPreviousClick(page) {
+    onPreviousClick() {
       this.eventPreviousClick = true;
     },
     onEdgeLeft() {
       this.eventEdgeLeft = true;
     },
-    onNextClick(page) {
+    onNextClick() {
       this.eventNextClick = true;
     },
     onEdgeRight() {

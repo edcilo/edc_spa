@@ -52,7 +52,7 @@ import VeNav from "@/components/Nav";
   },
   metaInfo() {
     const appName: string = config("app.name");
-    const appSection: string = capitalize(i18n.t("nav.components"));
+    const appSection: string = capitalize(i18n.t("nav.components") as string);
 
     return {
       title: `${appName} - ${appSection}`

@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { VNode } from "vue";
-import { Component, Model, Prop, Vue, Watch } from "vue-property-decorator";
+import { Component, Model, Prop, Vue } from "vue-property-decorator";
 
 @Component({
   name: "VeSwitch"

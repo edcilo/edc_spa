@@ -10,32 +10,6 @@ interface MouseEventCustom extends MouseEvent {
   [key: string]: any;
 }
 
-export default function(i: DataInterface) {
-  bindMouseScrollHandler(i, [
-    "width",
-    "width",
-    "pageX",
-    "xWidth",
-    "x",
-    "xWidth",
-    "scrollLeft",
-    "x",
-    "xRail"
-  ]);
-
-  bindMouseScrollHandler(i, [
-    "height",
-    "height",
-    "pageY",
-    "yHeight",
-    "y",
-    "yHeight",
-    "scrollTop",
-    "y",
-    "yRail"
-  ]);
-}
-
 function bindMouseScrollHandler(
   i: DataInterface,
   [
@@ -56,9 +30,9 @@ function bindMouseScrollHandler(
 
   const element: HTMLElementIndex = i.element;
 
-  let startingScrollTop: number = 0;
-  let startingMousepage: number = 0;
-  let scrollBy: number = 0;
+  let startingScrollTop = 0;
+  let startingMousepage = 0;
+  let scrollBy = 0;
 
   function mouseMoveHandler(e: MouseEventCustom) {
     element[scrollTop] =
@@ -105,4 +79,30 @@ function bindMouseScrollHandler(
       e.preventDefault();
     }
   );
+}
+
+export default function(i: DataInterface) {
+  bindMouseScrollHandler(i, [
+    "width",
+    "width",
+    "pageX",
+    "xWidth",
+    "x",
+    "xWidth",
+    "scrollLeft",
+    "x",
+    "xRail"
+  ]);
+
+  bindMouseScrollHandler(i, [
+    "height",
+    "height",
+    "pageY",
+    "yHeight",
+    "y",
+    "yHeight",
+    "scrollTop",
+    "y",
+    "yRail"
+  ]);
 }

@@ -12,7 +12,14 @@ export default class AppModule extends VuexModule implements appState {
 
   public headerFixed = false;
 
+  public loading = true;
+
   public navDashboardExpanded = true;
+
+  @Mutation
+  closeNavDashboard() {
+    this.navDashboardExpanded = false;
+  }
 
   @Mutation
   fixHeader(fix = true) {
@@ -20,8 +27,8 @@ export default class AppModule extends VuexModule implements appState {
   }
 
   @Mutation
-  setLocale(locale: string) {
-    this.locale = locale;
+  openNavDashboard() {
+    this.navDashboardExpanded = true;
   }
 
   @Mutation
@@ -30,17 +37,17 @@ export default class AppModule extends VuexModule implements appState {
   }
 
   @Mutation
+  setLoading(loading: boolean) {
+    this.loading = loading;
+  }
+
+  @Mutation
+  setLocale(locale: string) {
+    this.locale = locale;
+  }
+
+  @Mutation
   toggleNavDashboardExpanded() {
     this.navDashboardExpanded = !this.navDashboardExpanded;
-  }
-
-  @Mutation
-  closeNavDashboard() {
-    this.navDashboardExpanded = false;
-  }
-
-  @Mutation
-  OpenNavDashboard() {
-    this.navDashboardExpanded = true;
   }
 }

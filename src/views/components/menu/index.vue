@@ -269,19 +269,19 @@ export default {
   },
 
   methods: {
-    onBeforeOpen(event) {
+    onBeforeOpen() {
       this.event = "onBeforeOpen";
     },
-    onOpening(event) {
+    onOpening() {
       setTimeout(() => (this.event = "onOpening"), 500);
     },
     onAfterOpen() {
       setTimeout(() => (this.event = "onAfterOpen"), 1000);
     },
-    onBeforeClose(event) {
+    onBeforeClose() {
       this.event = "onBeforeClose";
     },
-    onClosing(event) {
+    onClosing() {
       setTimeout(() => (this.event = "onClosing"), 500);
     },
     onAfterClose() {

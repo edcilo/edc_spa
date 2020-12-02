@@ -101,7 +101,6 @@
 </template>
 
 <script>
-import VeBlueprint from "@/components/Blueprint";
 import VeCode from "@/components/Code";
 import VeCol from "@/components/Grid/Col";
 import VeDivider from "@/components/Divider";

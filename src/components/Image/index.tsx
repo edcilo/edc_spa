@@ -36,7 +36,7 @@ export default class VeImage extends Vue {
     : null;
   protected previewClass: Preview = { preview: true, reveal: false };
   protected timer: any = null;
-  protected loaded: boolean = false;
+  protected loaded = false;
 
   @Watch("src")
   onSrcChanged(src: string): void {
@@ -62,16 +62,16 @@ export default class VeImage extends Vue {
 
   protected inView(): void {
     requestAnimationFrame(() => {
-      let wT = window.pageYOffset;
-      let wB = wT + window.innerHeight;
+      const wT = window.pageYOffset;
+      const wB = wT + window.innerHeight;
 
       if (!this.$refs.preview) {
         return;
       }
 
-      let cRect = this.$refs.preview.getBoundingClientRect();
-      let pT = wT + cRect.top;
-      let pB = pT + cRect.height;
+      const cRect = this.$refs.preview.getBoundingClientRect();
+      const pT = wT + cRect.top;
+      const pB = pT + cRect.height;
 
       if (wT < pB && wB > pT) {
         this.srcImage = this.src;
