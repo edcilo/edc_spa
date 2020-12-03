@@ -2,7 +2,7 @@
   <div class="powered-by">
     <ve-container>
       <div class="powered-by__content">
-        <div class="powered-by__body">
+        <div class="powered-by__body" v-if="poweredBy !== null">
           <span class="powered-by__label">{{ poweredBy.label }}</span>
           <h2 class="powered-by__title">{{ poweredBy.title }}</h2>
           <div class="powered-by__branding">

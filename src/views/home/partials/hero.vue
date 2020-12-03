@@ -2,6 +2,7 @@
   <ve-hero class="hero" :height="100">
     <div class="hero__background">
       <div
+        v-show="background !== null"
         class="hero__cover"
         :style="{ 'background-image': `url(${background})` }"
       />
@@ -10,9 +11,9 @@
     <ve-container>
       <div class="hero__content">
         <div class="hero__body">
-          <span class="hero__label">{{ hero.label }}</span>
-          <h1 class="hero__title" v-html="hero.title" />
-          <p class="hero__subtitle">{{ hero.subtitle }}</p>
+          <span class="hero__label">{{ hero.label || '...' }}</span>
+          <h1 class="hero__title" v-html="hero.title || '...'" />
+          <p class="hero__subtitle">{{ hero.subtitle || '...' }}</p>
         </div>
       </div>
     </ve-container>
@@ -39,11 +40,11 @@ export default class ViewPartialHero extends Vue {
   protected schema!: SchemaInterface;
 
   get hero() {
-    return this.schema.hero;
+    return this.schema !== null ? this.schema.hero : null;
   }
 
   get background() {
-    return require(`@/assets${this.schema.hero.background}`);
+    return this.schema !== null ? require(`@/assets${this.schema.hero.background}`) : null;
   }
 }
 </script>

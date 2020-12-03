@@ -2,7 +2,7 @@
   <div class="footer">
     <ve-container>
       <div class="footer__content">
-        <div class="footer__body">
+        <div class="footer__body" v-if="footer !== null">
           <ve-row>
             <ve-col class="footer__col-1">
               <img
