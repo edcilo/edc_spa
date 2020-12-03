@@ -67,7 +67,7 @@ export default class ViewPartialFooter extends Vue {
   protected schema!: SchemaInterface;
 
   get footer() {
-    return this.schema.footer;
+    return this.schema !== null ? this.schema.footer : null;
   }
 }
 </script>

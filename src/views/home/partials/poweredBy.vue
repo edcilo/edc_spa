@@ -38,7 +38,7 @@ export default class ViewPartialPoweredBy extends Vue {
   protected schema!: SchemaInterface;
 
   get poweredBy() {
-    return this.schema.powered_by;
+    return this.schema !== null ? this.schema.powered_by : null;
   }
 
   importAsset(icon: string) {
