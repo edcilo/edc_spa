@@ -58,6 +58,7 @@ export default class ViewPartialFooter extends Vue {
   padding: $padding-base 0;
   color: #656d7a;
   font-size: $font-sm;
+  min-width: 320px;
 
   &__locale {
     text-align: right;
@@ -65,6 +66,16 @@ export default class ViewPartialFooter extends Vue {
     &-group {
       margin: 0;
       width: auto;
+    }
+  }
+
+  &__rights,
+  &__locale {
+    @media only screen and (max-width: 450px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: $margin-base;
+      text-align: center;
     }
   }
 }
