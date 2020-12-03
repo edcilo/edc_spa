@@ -77,6 +77,7 @@ export default class ViewPartialFooter extends Vue {
 
 .footer {
   background: $c-gray-darkest;
+  min-width: 320px;
 
   &__content {
     padding: $padding-lg;
@@ -86,6 +87,12 @@ export default class ViewPartialFooter extends Vue {
   &__col-4 {
     text-align: center;
     color: $c-white;
+
+    @media only screen and (max-width: 512px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: $margin-2xl;
+    }
   }
 
   &__logo {

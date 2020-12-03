@@ -55,11 +55,12 @@ export default class ViewPartialHero extends Vue {
 .hero {
   background: transparent;
   display: flex;
+  min-width: 320px;
 
   &__background {
-    background: red;
     position: absolute;
     width: 100%;
+    min-width: 320px;
     height: 100%;
   }
 

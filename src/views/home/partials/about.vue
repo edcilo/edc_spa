@@ -1,5 +1,5 @@
 <template>
-  <div class="aboout">
+  <div class="about">
     <ve-container>
       <div class="about__content">
         <div class="about__body" v-if="about !== null">
@@ -8,6 +8,7 @@
             <h2 class="about__title">{{ about.title }}</h2>
             <p class="about__description">{{ about.description }}</p>
           </div>
+
           <ve-row>
             <ve-col class="about__cols">
               <h3 class="about__subtitle">{{ about.jobs.title }}</h3>
@@ -103,6 +104,7 @@ export default class ViewPartialAbout extends Vue {
 .about {
   background: transparent;
   display: flex;
+  min-width: 320px;
 
   &__content {
     width: 100%;
@@ -156,6 +158,10 @@ export default class ViewPartialAbout extends Vue {
   &__job {
     &-item {
       margin-bottom: $margin-base;
+
+      @media only screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
 
     &-title {
@@ -208,6 +214,14 @@ export default class ViewPartialAbout extends Vue {
     }
 
     &-years {
+    }
+  }
+
+  &__cols {
+    @media only screen and (max-width: 768px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: $margin-2xl;
     }
   }
 }
