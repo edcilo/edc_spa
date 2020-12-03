@@ -78,5 +78,9 @@ export default class ViewPartialFooter extends Vue {
       text-align: center;
     }
   }
+
+  .dark-mode {
+    margin-right: $margin-base;
+  }
 }
 </style>
