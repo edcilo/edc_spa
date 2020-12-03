@@ -2,7 +2,7 @@
   <div class="powered-by">
     <ve-container>
       <div class="powered-by__content">
-        <div class="powered-by__body">
+        <div class="powered-by__body" v-if="poweredBy !== null">
           <span class="powered-by__label">{{ poweredBy.label }}</span>
           <h2 class="powered-by__title">{{ poweredBy.title }}</h2>
           <div class="powered-by__branding">
@@ -38,7 +38,7 @@ export default class ViewPartialPoweredBy extends Vue {
   protected schema!: SchemaInterface;
 
   get poweredBy() {
-    return this.schema.powered_by;
+    return this.schema !== null ? this.schema.powered_by : null;
   }
 
   importAsset(icon: string) {

@@ -2,7 +2,7 @@
   <div class="footer">
     <ve-container>
       <div class="footer__content">
-        <div class="footer__body">
+        <div class="footer__body" v-if="footer !== null">
           <ve-row>
             <ve-col class="footer__col-1">
               <img
@@ -67,7 +67,7 @@ export default class ViewPartialFooter extends Vue {
   protected schema!: SchemaInterface;
 
   get footer() {
-    return this.schema.footer;
+    return this.schema !== null ? this.schema.footer : null;
   }
 }
 </script>

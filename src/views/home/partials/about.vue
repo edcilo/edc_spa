@@ -2,7 +2,7 @@
   <div class="aboout">
     <ve-container>
       <div class="about__content">
-        <div class="about__body">
+        <div class="about__body" v-if="about !== null">
           <div class="about__me">
             <span class="about__label">{{ about.label }}</span>
             <h2 class="about__title">{{ about.title }}</h2>
@@ -92,7 +92,7 @@ export default class ViewPartialAbout extends Vue {
   protected schema!: SchemaInterface;
 
   get about() {
-    return this.schema.about;
+    return this.schema !== null ? this.schema.about : null;
   }
 }
 </script>

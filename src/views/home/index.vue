@@ -2,8 +2,8 @@
   <landing-layout>
     <partial-hero />
     <partial-about />
-    <powered-by />
-    <contact />
+    <partial-powered-by />
+    <partial-contact />
   </landing-layout>
 </template>
 
@@ -16,8 +16,8 @@ import { Component } from "vue-property-decorator";
 import LandingLayout from "@/layouts/landing.vue";
 import PartialHero from "@/views/home/partials/hero.vue";
 import PartialAbout from "@/views/home/partials/about.vue";
-import PoweredBy from "@/views/home/partials/poweredBy.vue";
-import Contact from "@/views/home/partials/footer.vue";
+import PartialPoweredBy from "@/views/home/partials/poweredBy.vue";
+import PartialContact from "@/views/home/partials/footer.vue";
 
 @Component({
   name: "ViewHome",
@@ -25,15 +25,15 @@ import Contact from "@/views/home/partials/footer.vue";
     LandingLayout,
     PartialHero,
     PartialAbout,
-    PoweredBy,
-    Contact
+    PartialPoweredBy,
+    PartialContact
   },
   metaInfo() {
     const title: string = config("app.name");
 
     return {
       title: title,
-      meta: [{ name: "description", content: "EVA - Vue.js framework" }]
+      meta: [{ name: "description", content: "edcilo.com it's the beginning." }]
     };
   }
 })
