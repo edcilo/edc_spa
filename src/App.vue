@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="className">
+  <div id="app" :class="[className, {dark: darkMode}]">
     <ve-loading
       :open="loading"
       :fullscreen="loader.fullscreen"
@@ -32,6 +32,9 @@ const landingpage = namespace("landingpage");
 export default class App extends Vue {
   protected className: string | null = null;
   protected landingService = new LandingpageService();
+
+  @app.State
+  protected darkMode!: boolean;
 
   @app.State
   protected loading!: boolean;
