@@ -78,6 +78,10 @@ export default class App extends Vue {
 <style lang="scss">
 @import "src/styles/main";
 
+body {
+  background: darken($c-white, 90%);
+}
+
 .loader-logo {
   width: 120px;
   height: auto;
