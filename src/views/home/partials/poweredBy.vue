@@ -54,6 +54,14 @@ export default class ViewPartialPoweredBy extends Vue {
   background: $c-gray-base;
   min-width: 320px;
 
+  .dark & {
+    background: darken($c-gray-base, 40%);
+
+    &__title {
+      color: $c-gray-lighter;
+    }
+  }
+
   &__content {
     width: 100%;
     height: 100%;

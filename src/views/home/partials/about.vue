@@ -106,6 +106,39 @@ export default class ViewPartialAbout extends Vue {
   display: flex;
   min-width: 320px;
 
+  .dark & {
+    background: darken($c-white, 90%);
+
+    &__title, &__subtitle {
+      color: $c-gray-lightest;
+    }
+
+    &__description {
+      color: $c-gray-lighter;
+    }
+
+    &__job  {
+      &-position {
+        color: $c-gray-lighter;
+      }
+      &-time {
+        color: $c-gray-base;
+      }
+    }
+
+    &__doing {
+      &-description {
+        color: $c-gray-lighter;
+      }
+    }
+
+    &__skills {
+      &-item {
+        color: $c-gray-lighter;
+      }
+    }
+  }
+
   &__content {
     width: 100%;
     height: 100%;
