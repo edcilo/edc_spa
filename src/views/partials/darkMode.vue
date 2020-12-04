@@ -4,7 +4,7 @@
     <ve-input-switch
       v-model="switchVal"
       :checked="darkMode"
-      @change="toggleDarkMode(!darkMode)"
+      @change="toggleDarkMode"
     />
     <font-awesome-icon class="dark-mode__moon" icon="moon" />
   </div>
@@ -41,8 +41,12 @@ export default class ViewPartialLang extends Vue {
   @app.Mutation
   protected setDarkmode!: Function;
 
-  protected toggleDarkMode(darkMode: boolean) {
-    this.setDarkmode(darkMode);
+  protected toggleDarkMode() {
+    this.setDarkmode(this.switchVal);
+  }
+
+  public mounted() {
+    this.switchVal = this.darkMode;
   }
 }
 </script>
