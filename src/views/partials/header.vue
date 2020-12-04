@@ -8,7 +8,7 @@
     <router-link slot="left" :to="{ name: 'home' }">
       <img
         class="app__header-logo"
-        src="@/assets/edcilo-logo-dark.svg"
+        :src="logo"
         alt="logo"
         width="60px"
       />
@@ -50,10 +50,19 @@ export default class HeaderPartial extends Vue {
   }
 
   @app.State
+  protected darkMode!: boolean;
+
+  @app.State
   protected headerFixed!: boolean;
 
   @app.Mutation
   protected fixHeader!: Function;
+
+  get logo() {
+    return !this.darkMode
+      ? require("@/assets/edcilo-logo-dark.svg")
+      : require("@/assets/edcilo-logo-clear.svg");
+  }
 
   getCurrentScroll(): number {
     return window.pageYOffset || document.documentElement.scrollTop;
@@ -79,6 +88,13 @@ export default class HeaderPartial extends Vue {
 .app__header {
   transition: background 0.3s;
   background: transparent;
+
+  .dark & {
+    &.visible {
+      background: darken($c-white, 80%);
+      border-bottom-color: darken($c-white, 80%);
+    }
+  }
 
   &.visible {
     background: $c-white;

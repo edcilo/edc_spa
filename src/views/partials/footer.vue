@@ -60,6 +60,10 @@ export default class ViewPartialFooter extends Vue {
   font-size: $font-sm;
   min-width: 320px;
 
+  .dark &  {
+    background: darken(#1f2026, 20%);
+  }
+
   &__locale {
     text-align: right;
 
