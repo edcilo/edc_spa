@@ -79,6 +79,14 @@ export default class ViewPartialFooter extends Vue {
   background: $c-gray-darkest;
   min-width: 320px;
 
+  .dark & {
+    background: darken($c-gray-darkest, 15%);
+
+    &__title {
+      color: $c-gray-lighter;
+    }
+  }
+
   &__content {
     padding: $padding-lg;
   }

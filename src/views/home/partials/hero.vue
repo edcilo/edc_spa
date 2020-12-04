@@ -57,6 +57,29 @@ export default class ViewPartialHero extends Vue {
   display: flex;
   min-width: 320px;
 
+  .dark & {
+    &__cover {
+      background-color: $c-gray-darkest;
+    }
+
+    &__layer {
+      background: rgba($c-gray-darkest, 0.8);
+      background: linear-gradient(
+        90deg,
+        rgba($c-gray-darkest, 1) 0%,
+        rgba($c-gray-darkest, 0.3) 100%
+      );
+    }
+
+    &__title {
+      color: $c-gray-lightest;
+    }
+
+    &__subtitle {
+      color: $c-gray-base;
+    }
+  }
+
   &__background {
     position: absolute;
     width: 100%;
