@@ -44,7 +44,7 @@ export default class ViewPartialHero extends Vue {
   }
 
   get background() {
-    return this.schema !== null ? require(`@/assets${this.schema.hero.background}`) : null;
+    return this.schema.hero.background;
   }
 }
 </script>
