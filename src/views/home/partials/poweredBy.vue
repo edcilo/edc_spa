@@ -10,7 +10,7 @@
               v-for="icon in poweredBy.branding"
               :key="icon"
               class="powered-by__logo"
-              :src="importAsset(icon)"
+              :src="icon"
             />
           </div>
         </div>
@@ -39,10 +39,6 @@ export default class ViewPartialPoweredBy extends Vue {
 
   get poweredBy() {
     return this.schema !== null ? this.schema.powered_by : null;
-  }
-
-  importAsset(icon: string) {
-    return require(`@/assets${icon}`);
   }
 }
 </script>

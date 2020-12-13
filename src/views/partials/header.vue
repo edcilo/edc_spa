@@ -60,8 +60,8 @@ export default class HeaderPartial extends Vue {
 
   get logo() {
     return !this.darkMode
-      ? require("@/assets/edcilo-logo-dark.svg")
-      : require("@/assets/edcilo-logo-clear.svg");
+      ? "https://space.edcilo.com/edcilo-logo-dark.svg"
+      : "https://space.edcilo.com/edcilo-logo-clear.svg";
   }
 
   getCurrentScroll(): number {

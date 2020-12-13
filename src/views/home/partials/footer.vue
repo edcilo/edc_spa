@@ -7,7 +7,7 @@
             <ve-col class="footer__col-1">
               <img
                 class="footer__logo"
-                :src="require('@/assets/edcilo-logo-clear.svg')"
+                src="https://space.edcilo.com/edcilo-logo-clear.svg"
                 alt="logo-white"
               />
             </ve-col>
