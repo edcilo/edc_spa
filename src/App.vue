@@ -34,6 +34,9 @@ export default class App extends Vue {
   protected landingService = new LandingpageService();
 
   @app.State
+  protected locale!: string;
+
+  @app.State
   protected darkMode!: boolean;
 
   @app.State
@@ -54,15 +57,20 @@ export default class App extends Vue {
   };
 
   @Watch("$route", { immediate: true })
-  onRoutehanged(to: Route) {
+  onRouteChanged(to: Route) {
     this.className = to.name || null;
   }
 
-  async mounted() {
+  @Watch("locale")
+  onLocaleChanged() {
+    this.getLandingSchema()
+  }
+
+  async getLandingSchema() {
     this.setLoading(true);
 
     try {
-      const res = await this.landingService.getSchema();
+      const res = await this.landingService.getSchema(this.locale);
 
       this.setName(res.data.name);
       this.setSchema(res.data.schema);
@@ -71,6 +79,10 @@ export default class App extends Vue {
       console.error("Error getting data from landingpage");
       console.error(e.status, e.statusText);
     }
+  }
+
+  mounted() {
+    this.getLandingSchema();
   }
 }
 </script>
