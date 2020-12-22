@@ -9,7 +9,7 @@ export default class LandingpageService extends Service {
     this.applyMiddleware();
   }
 
-  getSchema() {
-    return this.client.get("/");
+  getSchema(lang: string) {
+    return this.client.get(`/?lang=${lang}`);
   }
 }
