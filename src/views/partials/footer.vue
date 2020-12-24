@@ -60,7 +60,7 @@ export default class ViewPartialFooter extends Vue {
   font-size: $font-sm;
   min-width: 320px;
 
-  .dark &  {
+  .dark & {
     background: darken(#1f2026, 20%);
   }
 

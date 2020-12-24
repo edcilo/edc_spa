@@ -109,7 +109,8 @@ export default class ViewPartialAbout extends Vue {
   .dark & {
     background: darken($c-white, 90%);
 
-    &__title, &__subtitle {
+    &__title,
+    &__subtitle {
       color: $c-gray-lightest;
     }
 
@@ -117,7 +118,7 @@ export default class ViewPartialAbout extends Vue {
       color: $c-gray-lighter;
     }
 
-    &__job  {
+    &__job {
       &-position {
         color: $c-gray-lighter;
       }

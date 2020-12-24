@@ -57,7 +57,8 @@ export default class ViewPartialLang extends Vue {
 .dark-mode {
   display: inline;
 
-  &__sun, &__moon {
+  &__sun,
+  &__moon {
     margin-right: $margin-sm;
   }
 

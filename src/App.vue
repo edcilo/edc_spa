@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="[className, {dark: darkMode}]">
+  <div id="app" :class="[className, { dark: darkMode }]">
     <ve-loading
       :open="loading"
       :fullscreen="loader.fullscreen"
@@ -63,7 +63,7 @@ export default class App extends Vue {
 
   @Watch("locale")
   onLocaleChanged() {
-    this.getLandingSchema()
+    this.getLandingSchema();
   }
 
   async getLandingSchema() {

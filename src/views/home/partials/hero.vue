@@ -11,9 +11,9 @@
     <ve-container>
       <div class="hero__content">
         <div class="hero__body">
-          <span class="hero__label">{{ hero.label || '...' }}</span>
+          <span class="hero__label">{{ hero.label || "..." }}</span>
           <h1 class="hero__title" v-html="hero.title || '...'" />
-          <p class="hero__subtitle">{{ hero.subtitle || '...' }}</p>
+          <p class="hero__subtitle">{{ hero.subtitle || "..." }}</p>
         </div>
       </div>
     </ve-container>
