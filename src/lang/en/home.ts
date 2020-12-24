@@ -1,3 +1,5 @@
 export default {
-  designedWith: "Designed with"
+  designedWith: "Designed with",
+
+  contactFormSuccess: "Thanks for contact with us!"
 };

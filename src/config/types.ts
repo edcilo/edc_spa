@@ -1,5 +1,5 @@
-interface config {
+interface ConfigInterface {
   [propname: string]: any;
 }
 
-export default config;
+export default ConfigInterface;

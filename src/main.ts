@@ -1,4 +1,5 @@
 import Vue from "vue";
+import Vuelidate from "vuelidate";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import i18n from "./lang";
@@ -9,6 +10,7 @@ import "./filters";
 import "./directives";
 
 Vue.config.productionTip = false;
+Vue.use(Vuelidate);
 
 new Vue({
   i18n,

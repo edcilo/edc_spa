@@ -9,5 +9,7 @@ export default {
 
   name: process.env.VUE_APP_NAME || "app",
 
-  version: "1.0.0"
+  version: "1.0.0",
+
+  recaptchaKey: process.env.VUE_RECAPTCHA_KEY || null
 };
