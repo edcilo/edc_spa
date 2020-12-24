@@ -319,6 +319,7 @@ export default class ViewPartialContact extends Vue {
   &__content {
     width: 100%;
     height: 100%;
+    position: relative;
     z-index: 1;
     padding: $padding-3xl 0;
   }
