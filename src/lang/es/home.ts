@@ -1,3 +1,5 @@
 export default {
-  designedWith: "Diseñado con"
+  designedWith: "Diseñado con",
+
+  contactFormSuccess: "¡Gracias por contactar con nostros!"
 };

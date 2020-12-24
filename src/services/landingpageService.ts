@@ -13,11 +13,12 @@ export default class LandingpageService extends Service {
     return this.client.get(`/?lang=${lang}`);
   }
 
-  contactForm(name: string, email: string, message: string) {
+  contactForm(name: string, email: string, message: string, recaptcha: string) {
     return this.client.post("/contact", {
       name,
       email,
-      message
+      message,
+      recaptcha
     });
   }
 }
