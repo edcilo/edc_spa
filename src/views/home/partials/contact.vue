@@ -4,8 +4,8 @@
       <div class="contact__content">
         <div class="contact__body">
           <div class="contact__header">
-            <span class="contact__label">Text me</span>
-            <h2 class="contact__title">Contact</h2>
+            <span class="contact__label">{{ contact.label }}</span>
+            <h2 class="contact__title">{{ contact.title }}</h2>
           </div>
 
           <div class="contact__form">
@@ -90,6 +90,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import { namespace } from "vuex-class";
 import config from "@/config";
 
 import VueRecaptcha from "vue-recaptcha";
@@ -107,8 +108,11 @@ import { email, required, minLength } from "vuelidate/lib/validators";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPaperPlane, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import {SchemaInterface} from "@/store/landingpage/types";
 
 library.add(faPaperPlane, faCircleNotch);
+
+const landingpage = namespace("landingpage");
 
 interface ErrorsInterface {
   name: string | null;
@@ -170,6 +174,13 @@ export default class ViewPartialContact extends Vue {
   };
 
   public $refs!: { recaptchaControl: Vue & { reset: () => boolean } };
+
+  @landingpage.State
+  protected schema!: SchemaInterface;
+
+  get contact() {
+    return this.schema !== null ? this.schema.contact : null;
+  }
 
   clearData() {
     this.$refs.recaptchaControl.reset();
