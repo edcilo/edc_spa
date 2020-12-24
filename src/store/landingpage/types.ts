@@ -46,6 +46,10 @@ export interface SchemaInterface {
     title: string;
     branding: Array<string>;
   };
+  contact: {
+    label: string;
+    title: string;
+  };
   footer: {
     title: string;
     email: string;
