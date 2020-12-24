@@ -49,6 +49,7 @@ export interface SchemaInterface {
   contact: {
     label: string;
     title: string;
+    background: string;
   };
   footer: {
     title: string;

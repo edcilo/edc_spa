@@ -1,5 +1,12 @@
 <template>
   <div class="contact">
+    <div
+      v-show="background !== null"
+      class="contact__cover"
+      :style="{ 'background-image': `url(${background})` }"
+    />
+    <div class="contact__layer" />
+
     <ve-container>
       <div class="contact__content">
         <div class="contact__body">
@@ -108,7 +115,7 @@ import { email, required, minLength } from "vuelidate/lib/validators";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPaperPlane, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import {SchemaInterface} from "@/store/landingpage/types";
+import { SchemaInterface } from "@/store/landingpage/types";
 
 library.add(faPaperPlane, faCircleNotch);
 
@@ -180,6 +187,10 @@ export default class ViewPartialContact extends Vue {
 
   get contact() {
     return this.schema !== null ? this.schema.contact : null;
+  }
+
+  get background() {
+    return this.schema.contact.background;
   }
 
   clearData() {
@@ -267,9 +278,18 @@ export default class ViewPartialContact extends Vue {
   background: transparent;
   display: flex;
   min-width: 320px;
+  position: relative;
 
   .dark & {
     background: darken($c-white, 90%);
+
+    &__cover {
+      background-color: $c-gray-darkest;
+    }
+
+    &__layer {
+      background: rgba($c-gray-darkest, 0.6);
+    }
 
     &__title,
     &__subtitle {
@@ -277,9 +297,29 @@ export default class ViewPartialContact extends Vue {
     }
   }
 
+  &__cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $c-gray-lighter;
+  }
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($c-gray-lighter, 0.6);
+  }
+
   &__content {
     width: 100%;
     height: 100%;
+    z-index: 1;
     padding: $padding-3xl 0;
   }
 
