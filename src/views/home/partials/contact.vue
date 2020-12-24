@@ -110,6 +110,20 @@ import { faPaperPlane, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faPaperPlane, faCircleNotch);
 
+interface ErrorsInterface {
+  name: string | null;
+  email: string | null;
+  message: string | null;
+  recaptcha: string | null;
+}
+
+interface ErrorsResponseInterface {
+  name: Array<string | null>;
+  email: Array<string | null>;
+  message: Array<string | null>;
+  recaptcha: Array<string | null>;
+}
+
 @Component({
   name: "ViewPartialContact",
   components: {
@@ -148,12 +162,14 @@ export default class ViewPartialContact extends Vue {
   protected recaptchaLoading = true;
   protected loading = false;
   protected success = false;
-  protected errors = {
+  protected errors: ErrorsInterface = {
     name: null,
     email: null,
     message: null,
     recaptcha: null
   };
+
+  public $refs!: { recaptchaControl: Vue & { reset: () => boolean } };
 
   clearData() {
     this.$refs.recaptchaControl.reset();
@@ -173,7 +189,7 @@ export default class ViewPartialContact extends Vue {
     this.recaptchaLoading = false;
   }
 
-  showErrorMessage(errors) {
+  showErrorMessage(errors: ErrorsResponseInterface) {
     if (errors.name) {
       this.errors.name = errors.name[0];
     }
@@ -197,9 +213,13 @@ export default class ViewPartialContact extends Vue {
 
     try {
       if (this.recaptcha === null) {
-        this.showErrorMessage({ recaptcha: ["El campo es invalido."] });
+        this.showErrorMessage({
+          name: [],
+          email: [],
+          message: [],
+          recaptcha: ["El campo es invalido."]
+        });
         this.loading = false;
-        console.log(this.recaptcha);
         return;
       }
 

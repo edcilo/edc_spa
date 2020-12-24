@@ -6,12 +6,7 @@
     areas="left center right"
   >
     <router-link slot="left" :to="{ name: 'home' }">
-      <img
-        class="app__header-logo"
-        :src="logo"
-        alt="logo"
-        width="60px"
-      />
+      <img class="app__header-logo" :src="logo" alt="logo" width="60px" />
     </router-link>
 
     <ve-nav slot="right" class="app__menu">
